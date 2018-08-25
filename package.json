@@ -4,7 +4,7 @@
   "description": "a technical test for ZeDep",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "mocha"
   },
   "repository": {
     "type": "git",
@@ -25,13 +25,13 @@
   },
   "homepage": "https://github.com/blarvin/frontend-exercise#readme",
   "devDependencies": {
-    "chai": "^4.1.2",
+    "chai": "*",
     "eslint": "^5.4.0",
     "eslint-config-standard": "^11.0.0",
     "eslint-plugin-import": "^2.14.0",
     "eslint-plugin-node": "^7.0.1",
     "eslint-plugin-promise": "^4.0.0",
     "eslint-plugin-standard": "^3.1.0",
-    "mocha": "^5.2.0"
+    "mocha": "*"
   }
 }
