@@ -1,0 +1,31 @@
+{
+  "name": "frontend-exercise",
+  "version": "0.0.1",
+  "description": "a technical test for ZeDep",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/blarvin/frontend-exercise.git"
+  },
+  "keywords": [
+    "Zero",
+    "CSS",
+    "HTML",
+    "CI",
+    "CD",
+    "testing"
+  ],
+  "author": "North",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/blarvin/frontend-exercise/issues"
+  },
+  "homepage": "https://github.com/blarvin/frontend-exercise#readme",
+  "devDependencies": {
+    "chai": "^4.1.2",
+    "mocha": "^5.2.0"
+  }
+}
