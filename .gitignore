@@ -73,6 +73,3 @@ typings/
 .serverless
 
 .eslintrc.json
-
-package-lock.json
-
