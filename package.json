@@ -2,8 +2,12 @@
   "name": "frontend-exercise",
   "version": "0.0.1",
   "description": "a technical test for ZeDep",
+  "engines": {
+    "node": ">= 8.9.1"
+  },
   "main": "index.js",
   "scripts": {
+    "start": "node index.js",
     "test": "nyc mocha"
   },
   "repository": {
