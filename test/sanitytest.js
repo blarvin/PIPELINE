@@ -12,3 +12,6 @@ describe('What dogs are cool?', function () {
     })
   })
 })
+
+//  admin should be able to push/merge to master
+// as long as all tests are passing in CircleCI 
