@@ -12,6 +12,3 @@ describe('What dogs are cool?', function () {
     })
   })
 })
-
-// Now I should be able to push to a new branch...
-// passing tests
