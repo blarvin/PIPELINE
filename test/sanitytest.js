@@ -4,7 +4,7 @@ var CoolDogs = require('../app/index')
 describe('What dogs are cool?', function () {
   describe('Only smart dogs are cool:', function () {
     it('Should tell me a bloodhound is cool', function () {
-      expect(CoolDogs('bloodhoundzzz')).to.equal(true)
+      expect(CoolDogs('bloodhound')).to.equal(true)
     })
 
     it('Should tell me a shitzu is NOT cool', function () {
