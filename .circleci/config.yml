@@ -36,6 +36,29 @@ jobs:
       # run tests!
       - run: yarn test
 
+  cypress:
+    docker:
+      - image: cypress/base:8
+        environment:
+          ## this enables colors in the output
+          TERM: xterm
+    working_directory: ~/app
+    steps:
+      - checkout
+      - restore_cache:
+          key: v1-deps-{{ .Branch }}-{{ checksum "package.json" }}
+          key: v1-deps-{{ .Branch }}
+          key: v1-deps
+      - run:
+          name: Install Dependencies
+          command: npm ci
+      - save_cache:
+          key: v1-deps-{{ .Branch }}-{{ checksum "package.json" }}
+          paths:
+            - ~/.npm
+            - ~/.cache
+      - run: $(npm bin)/cypress run # --record --key <record_key>
+
   deploy:
     docker:
       - image: buildpack-deps:trusty
@@ -51,9 +74,15 @@ workflows:
   build-deploy:
     jobs:
       - build
-      - deploy:
+      - cypress:
           requires:
             - build
+          filters:
+            branches:
+              only: master
+      - deploy:
+          requires:
+            - cypress
           filters:
             branches:
               only: master
