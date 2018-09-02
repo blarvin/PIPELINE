@@ -30,6 +30,7 @@
   "homepage": "https://github.com/blarvin/frontend-exercise#readme",
   "devDependencies": {
     "chai": "*",
+    "cypress": "^3.1.0",
     "mocha": "*",
     "nyc": "^12.0.2"
   }
