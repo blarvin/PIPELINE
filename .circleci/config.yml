@@ -36,7 +36,7 @@ jobs:
       # run tests!
       - run: yarn test
 
-  cypress:
+  cypress_test_on_localhost:
     docker:
       - image: cypress/base:8
         environment:
@@ -57,7 +57,11 @@ jobs:
           paths:
             - ~/.npm
             - ~/.cache
-      - run: $(npm bin)/cypress run # --record --key <record_key>
+      - run:
+          name: Start server and Cypress
+          command: |
+            npm start
+            $(npm bin)/cypress run # --record --key <record_key>
 
   deploy:
     docker:
