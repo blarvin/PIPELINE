@@ -57,7 +57,10 @@ jobs:
           paths:
             - ~/.npm
             - ~/.cache
-      - run: nohup node server.js
+      - run:
+          name: Start server
+          command: node server.js
+          background: true
       - run: $(npm bin)/cypress run # --record --key <record_key>
 
   deploy:
