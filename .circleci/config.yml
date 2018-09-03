@@ -45,6 +45,7 @@ jobs:
     working_directory: ~/app
     steps:
       - checkout
+      - run: npm start
       - restore_cache:
           key: v1-deps-{{ .Branch }}-{{ checksum "package.json" }}
           key: v1-deps-{{ .Branch }}
@@ -57,11 +58,7 @@ jobs:
           paths:
             - ~/.npm
             - ~/.cache
-      - run:
-          name: Start server and Cypress
-          command: |
-            npm start
-            $(npm bin)/cypress run # --record --key <record_key>
+      - run: $(npm bin)/cypress run # --record --key <record_key>
 
   deploy:
     docker:
