@@ -4,6 +4,10 @@ Travis CI
 
 Unit Testing: Mocha with Chai assertion library and nyc coverage report
 
+Basically, to build an app through this Pipeline, you would just work inside the "app" folder**.
+
+
+
 
 1. See the page by running `npm start` or `node server.js` and
 visiting localhost:3000 (may change the localhost port at line 3 in server.js)
@@ -38,3 +42,9 @@ To use CI and CD:
     your tests and they pass, merge the branch into your master branch. Now
     CircleCI will run the workfow, push to Heroku, and the new version of your
     app is deployed.
+
+**However, there are still things   
+to do:
+* Webpack
+* shrinkwrap
+    

@@ -1,5 +1,5 @@
 {
-  "name": "frontend-exercise",
+  "name": "PIPELINE",
   "version": "0.0.1",
   "description": "a CD pipeline project",
   "engines": {
@@ -12,7 +12,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/blarvin/frontend-exercise.git"
+    "url": "git+https://github.com/blarvin/PIPELINE.git"
   },
   "keywords": [
     "Zero",
@@ -25,9 +25,9 @@
   "author": "North",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/blarvin/frontend-exercise/issues"
+    "url": "https://github.com/blarvin/PIPELINE/issues"
   },
-  "homepage": "https://github.com/blarvin/frontend-exercise#readme",
+  "homepage": "https://github.com/blarvin/PIPELINE#readme",
   "devDependencies": {
     "chai": "*",
     "cypress": "^3.1.0",
