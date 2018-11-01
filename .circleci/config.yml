@@ -71,6 +71,7 @@ jobs:
       - run:
           name: Deploy Master to Heroku
           command: |
+            git config user.email "blarvinius@gmail.com" && git config user.name "North Bremicker"
             git pull https://heroku:$HEROKU_API_KEY@git.heroku.com/$HEROKU_APP_NAME.git master
             git push https://heroku:$HEROKU_API_KEY@git.heroku.com/$HEROKU_APP_NAME.git master
 
