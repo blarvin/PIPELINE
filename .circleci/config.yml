@@ -47,8 +47,8 @@ jobs:
       - checkout
       - restore_cache:
           key: v1-deps-{{ .Branch }}-{{ checksum "package.json" }}
-          # key: v1-deps-{{ .Branch }}
-          # key: v1-deps
+          # key: v1-deps-{{ .Branch }} ## I dont know where these keys came from
+          # key: v1-deps               ## but they were breaking the build...
       - run:
           name: Install Dependencies
           command: npm ci

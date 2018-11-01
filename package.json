@@ -1,7 +1,7 @@
 {
   "name": "frontend-exercise",
   "version": "0.0.1",
-  "description": "a technical test for ZeDep",
+  "description": "a CD pipeline project",
   "engines": {
     "node": ">= 8.9.1"
   },
