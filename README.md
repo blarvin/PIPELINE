@@ -39,12 +39,12 @@ To use CI and CD:
 
     4.) Work on a branch, commit and push to that branch, and then make a
     Pull Request from that branch to your master branch. After CircleCI runs all
-    your tests and they pass, merge the branch into your master branch. Now
-    CircleCI will run the workfow, push to Heroku, and the new version of your
+    your tests and they pass, merge the branch into your master branch. (Or you could just push to master branch, of course.) Now CircleCI will run the workflow, push to Heroku, and the new version of your
     app is deployed.
 
 **However, there are still things   
 to do:
 * Webpack
 * shrinkwrap
-    
+*Cypress test could test that the page title is the page title, because it is Cypress
+*explanation of each folder and file in repo

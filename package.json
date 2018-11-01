@@ -15,9 +15,6 @@
     "url": "git+https://github.com/blarvin/PIPELINE.git"
   },
   "keywords": [
-    "Zero",
-    "CSS",
-    "HTML",
     "CI",
     "CD",
     "testing"
