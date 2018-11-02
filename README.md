@@ -24,6 +24,6 @@
 
 
 ##### yet to do:
-- [] add Webpack (and something to pack!)  
-- [] shrinkwrap-package-lock  
-- [] add ESlint
+- [ ] add Webpack (and something to pack!)  
+- [ ] shrinkwrap-package-lock  
+- [ ] add ESlint
