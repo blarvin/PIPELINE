@@ -48,3 +48,4 @@ to do:
 * shrinkwrap
 *Cypress test could test that the page title is the page title, because it is Cypress
 *explanation of each folder and file in repo
+*npm ci used at line 54 ... read about it here https://docs.npmjs.com/cli/ci
