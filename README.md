@@ -1,53 +1,23 @@
-NPM ...package.json
+Basically, to build an app through this Pipeline, you would just work inside the "app" folder, write integration/e2e tests in the /cypress folder, and write unit tests in the /test folder.
 
-Travis CI
+What it does: Runs your tests, and if they pass, deploys the app to cloud host.
 
-Unit Testing: Mocha with Chai assertion library and nyc coverage report
+How to use it:
+1. CircleCI will add a webhook to your GitHub/BitBucket repo which will trigger when you push or merge to that branch. When you sign up for the CircleCI account, you will authorize it to add hooks.
+   Just go to the 'Add Projects' tab on the left and you should see all your repos. The webhook should be on GitHub at yourRepo/settings/hooks.
 
-Basically, to build an app through this Pipeline, you would just work inside the "app" folder**.
+   2. Look at line 74 of .circleci/config.yml. Set these environment variables in the CircleCI platform at PROJECT/project settings/build settings/environment variables. (On Heroku, the api key is in your account settings. CircleCI will add its own ssh key to your Heroku account, to secure the transport. Heroku also needs the Procfile in the root of the repo, so leave that there.) This pipeline is configured to deploy to Heroku, but it isn't hard to change; see https://circleci.com/docs/2.0/deployment-integrations/.
 
+   3. Write Cypress integration tests as testy_mc_test_spec.js in the cypress directory. Use Chai.js syntax and see the https://docs.cypress.io/api/api/table-of-contents.html. The Cypress setup and run is at the cypress: key in the .yml.
 
+   4. Cypress  isn't great for unit testing, so Mocha, Chai, and nyc are installed as development dependencies. Write unit tests in /test directory. These are run in the 'build:' group a of the .yml.
 
+   5. You can serve the app locally with `npm start` or `node server.js`. You can change the localhost port at line 3 in server.js, or replace the whole server code. But make sure there is a working server.js in the root of the repo.
 
-1. See the page by running `npm start` or `node server.js` and
-visiting localhost:3000 (may change the localhost port at line 3 in server.js)
+   0. You ran `npm install` already...
 
-2. visit my Heroku deployment at https://zerodep.herokuapp.com/ it may take half
-   a minute to serve it up the first time
-
-3. deploy to your own PAAS platform by adding the required setup file
-   (in the case of Heroku, it is the Procfile)
-
-4. Deploy through a CI + CD pipeline by adding the required config
-   file (in the case of CircleCI, it is the .circleci/config.yml) To use
-   CircleCI you simply log into your free CircleCI web account and add a
-   webhook to your GitHub repo using the 'Add Projects' tab on the left.
-
-To use CI and CD:
-    1.) add branch protection to master branch on github. DE-SELECT the checkbox at
-    Branches>>Branch protection rule(master)>>Rule settings>>Require status
-    checks to pass before merging>>: "ci/circleci"
-    (apparently that was for CircleCI 1.0). Keep "ci/circleci: build" and
-    "ci/circleci: deploy" boxes checked.
-
-    2.) Get your Heroku API key by clicking on your account avatar in the
-    upper-right corner, and selecting "Account Settings". Then give CircleCI the
-    environment vars for your Heroku account by pasting them in under the
-    project's Settings (gear icon) >> Build Settings >> Environment Variables.  
-
-    3.) Add deploy job AND a workflow to .circleci/config.yml
-
-    4.) Work on a branch, commit and push to that branch, and then make a
-    Pull Request from that branch to your master branch. After CircleCI runs all
-    your tests and they pass, merge the branch into your master branch. (Or you could just push to master branch, of course.) Now CircleCI will run the workflow, push to Heroku, and the new version of your
-    app is deployed.
-
-**However, there are still things   
+Still some things   
 to do:
-* Webpack
-* shrinkwrap
-*Cypress test could test that the page title is the page title, because it is Cypress
-*explanation of each folder and file in repo
-*npm ci used at line 54 ... read about it here https://docs.npmjs.com/cli/ci
-*why no Cypress tests?
-*tests are run in a container on CircleCI... pre-deploy
+* add Webpack
+* shrinkwrap-package-lock
+* add ESlint
