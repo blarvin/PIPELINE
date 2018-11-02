@@ -50,3 +50,4 @@ to do:
 *explanation of each folder and file in repo
 *npm ci used at line 54 ... read about it here https://docs.npmjs.com/cli/ci
 *why no Cypress tests?
+*tests are run in a container on CircleCI... pre-deploy
