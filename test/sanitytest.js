@@ -1,5 +1,5 @@
 var expect = require('chai').expect
-var CoolDogs = require('../app/index')
+var CoolDogs = require('../src/index')
 
 describe('What dogs are cool?', function () {
   describe('Only smart dogs are cool:', function () {
