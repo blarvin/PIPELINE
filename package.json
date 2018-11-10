@@ -26,6 +26,8 @@
   },
   "homepage": "https://github.com/blarvin/PIPELINE#readme",
   "devDependencies": {
+    "@babel/core": "^7.1.5",
+    "@babel/preset-env": "^7.1.5",
     "chai": "*",
     "cypress": "3.1.0",
     "mocha": "*",
