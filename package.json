@@ -27,15 +27,15 @@
   "homepage": "https://github.com/blarvin/PIPELINE#readme",
   "devDependencies": {
     "chai": "*",
-    "cypress": "^3.1.0",
+    "cypress": "3.1.0",
     "mocha": "*",
-    "nyc": "^12.0.2",
-    "webpack": "^4.25.1",
-    "webpack-cli": "^3.1.2",
-    "webpack-dev-server": "^3.1.10"
+    "nyc": "12.0.2",
+    "webpack": "4.25.1",
+    "webpack-cli": "3.1.2",
+    "webpack-dev-server": "3.1.10"
   },
   "dependencies": {
-    "chalk": "^2.4.1",
+    "chalk": "2.4.1",
     "fs": "0.0.1-security",
     "http": "0.0.0"
   }
