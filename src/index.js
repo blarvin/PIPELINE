@@ -9,3 +9,6 @@ ReactDOM.render(
 );
 
 console.log("PIPELINE entry point");
+
+
+module.hot.accept();
