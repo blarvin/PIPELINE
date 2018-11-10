@@ -3,6 +3,8 @@ import ReactDOM from 'react-dom';
 
 const headline = "pipey McPipeface";
 
+const dogs = require('/scripts/dogs').CoolDogs;
+
 ReactDOM.render(
     <div>{headline}</div>,
     document.getElementById('app')
