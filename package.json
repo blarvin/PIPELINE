@@ -41,6 +41,8 @@
   "dependencies": {
     "chalk": "2.4.1",
     "fs": "0.0.1-security",
-    "http": "0.0.0"
+    "http": "0.0.0",
+    "react": "^16.6.1",
+    "react-dom": "^16.6.1"
   }
 }
