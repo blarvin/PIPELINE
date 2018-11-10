@@ -42,11 +42,5 @@
     "chalk": "2.4.1",
     "fs": "0.0.1-security",
     "http": "0.0.0"
-  },
-  "babel": {
-      "presets": [
-         "@babel/preset-env",
-         "@babel/preset-react"
-        ]
-    }
+  }
 }
