@@ -1,3 +1,12 @@
+import React from 'react';
+import ReactDOM from 'react-dom';
+
+const headline = "pipey McPipeface";
+
+ReactDOM.render(
+    <div>{headline}</div>,
+    document.getElementById('app')
+)
 
 function CoolDogs (petDog) {
     var dogs = {
